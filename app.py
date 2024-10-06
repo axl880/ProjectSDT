@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 st.title('US Dynamic Vehicle Listings for Sale!')
 
 #header with text and emoticons 
-st.header("_List of Vehicle Brands Available for 1994-2019 Models in the U.S._ 🛻 🚗 🚙 🚐")
+st.header("_List of Vehicle Brands Available for 1994-2019 Models in the U.S._ 🛻 🚗 🚙 🚐",divider="green")
 
 # Read file
 df = pd.read_csv('./vehicles_us_ok.csv')

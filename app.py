@@ -42,8 +42,10 @@ normalized = st.checkbox('Normalized')
 # error
 # create a histogram with manufacturer1 and manufacturer2 input
 fig = go.Figure()
-fig.add_trace(go.Histogram(x=df[df['manufacturer'] == manufacturer1]['price'], name=manufacturer1, opacity=0.75, histnorm='percent'))
-fig.add_trace(go.Histogram(x=df[df['manufacturer'] == manufacturer2]['price'], name=manufacturer2, opacity=0.75, histnorm='percent'))
+#color
+colors = ['#636EFA', '#EF553B']
+fig.add_trace(go.Histogram(x=df[df['manufacturer'] == manufacturer1]['price'], name=manufacturer1, opacity=0.75, histnorm='percent',marker_color=colors[0]))
+fig.add_trace(go.Histogram(x=df[df['manufacturer'] == manufacturer2]['price'], name=manufacturer2, opacity=0.75, histnorm='percent',marker_color=colors[1]))
 # normalize the histogram if the checkbox is checked
 if normalized:
     fig.update_layout(barmode='overlay')

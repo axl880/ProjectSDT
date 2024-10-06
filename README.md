@@ -41,3 +41,9 @@ at least one checkbox using st.checkbox that changes the behavior of any of the 
 - To make Streamlit compatible with Render, we need to create two new files: requirements.txt and .streamlit/config.toml.
 - First, we need to create the requirements.txt file. Create this new file in your project folder’s root level. Then, add your project’s required packages. 
 - Second, we need to add the configuration file to your git repository. Create the .streamlit directory, then add the config.toml file there (this can all be done with the right-click menu in the left-hand tab of VS Code).
+
+### Results
+- project repository on Github:
+https://github.com/axl880/ProjectSDT.git
+link app in Render:
+https://projectsdt-10.onrender.com

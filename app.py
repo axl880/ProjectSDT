@@ -36,10 +36,12 @@ normalized = st.checkbox('Normalized')
 
 
 
-fig = px.histogram(df, x="manufacturer", color="type", title="Number of cars for each manufacturer")
+#fig = px.histogram(df, x="manufacturer", color="type", title="Number of cars for each manufacturer")
 
+
+# error
 # create a histogram with manufacturer1 and manufacturer2 input
-fig = px.histogram()
+fig = go.Figure()
 fig.add_trace(go.Histogram(x=df[df['manufacturer'] == manufacturer1]['price'], name=manufacturer1, opacity=0.75, histnorm='percent'))
 fig.add_trace(go.Histogram(x=df[df['manufacturer'] == manufacturer2]['price'], name=manufacturer2, opacity=0.75, histnorm='percent'))
 # normalize the histogram if the checkbox is checked
@@ -52,6 +54,8 @@ fig.update_xaxes(title_text='Price')
 fig.update_yaxes(title_text='Percentage')
 # plot the histogram
 st.plotly_chart(fig)
+
+
 
 
 # scatter plot matrix 

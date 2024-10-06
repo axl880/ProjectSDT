@@ -4,8 +4,6 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-
-
 # main title of the app
 st.title('US Dynamic Vehicle Listings for Sale!')
 
@@ -24,7 +22,7 @@ fig = px.histogram(df, x='manufacturer', color='type')
 st.plotly_chart(fig)
 
 # Histogram Showing Price Distribution Across Manufacturers
-st.subheader('Histogram Showing Price Distribution Across Manufacturers').
+st.subheader('Histogram Showing Price Distribution Across Manufacturers')
 
 # Select Manufacturer 1 and Manufacturer 2 from the dropdown menu
 # Default values for the dropdown menu are set using indexes 1 and 2.
@@ -33,8 +31,6 @@ manufacturer2 = st.selectbox('Manufacturer 2', df['manufacturer'].unique(), inde
 
 # Create a checkbox to normalize the histogram
 normalized = st.checkbox('Normalized')
-
-
 
 # Generate a histogram using inputs from Manufacturer 1 and Manufacturer 2
 fig = go.Figure()
@@ -57,9 +53,6 @@ fig.update_yaxes(title_text='Percentage')
 
 # plot the histogram
 st.plotly_chart(fig)
-
-
-
 
 # scatter plot matrix 
 st.subheader('Scatter plot matrix')

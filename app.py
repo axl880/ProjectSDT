@@ -4,11 +4,14 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-st.header("_Streamlit_ is :blue[cool] :sunglasses:")
-st.header("Vehículos disponibles: 🚗🚙🚐")
+
 
 # Title of the app centered
-st.title('US Vehicle Advertisement Listings')
+st.title('US Dynamic Vehicle Listings for Sale!')
+
+
+st.header("_List of Vehicle Brands Available for 1994-2019 Models in the U.S._ 🛻 🚗 🚙 🚐")
+           
 
 # Read file
 df = pd.read_csv('./vehicles_us_ok.csv')
@@ -33,7 +36,19 @@ normalized = st.checkbox('Normalized')
 
 
 
-
-
 fig = px.histogram(df, x="manufacturer", color="type", title="Number of cars for each manufacturer")
 
+# scatter plot matrix 
+st.subheader('Scatter plot matrix')
+# drop down for each dimension 
+# index 1, 2, and 3 are used to set default values for the drop down menu
+x_axis = st.selectbox('X axis', df.columns, index=1)
+y_axis = st.selectbox('Y axis', df.columns, index=2)
+# drop down for the color
+color = st.selectbox('Color', df.columns, index=3)
+# subheader for the scatter plot matrix that automatically updates
+st.subheader(f'Scatter plot matrix of {x_axis} and {y_axis} by {color}')
+# create the scatter plot matrix
+fig = px.scatter_matrix(df, dimensions=[x_axis, y_axis], color=color)
+# plot the scatter plot matrix
+st.plotly_chart(fig)

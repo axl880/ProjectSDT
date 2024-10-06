@@ -1,4 +1,4 @@
-# ProjectSDT Software Development Tools: 
+# ProjectSDT Software Development Tools by Alex Garcia: 
 This project aims to provide additional practice on common software engineering SPRINT 4
 
 it’s time to apply the knowledge and skills you’ve acquired to a project: building and deploying a web application dashboard to a cloud service.

@@ -4,8 +4,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-#st.header("_Streamlit_ is :blue[cool] :sunglasses:")
-#st.header("Vehículos disponibles: 🚗🚙🚐")
+st.header("_Streamlit_ is :blue[cool] :sunglasses:")
+st.header("Vehículos disponibles: 🚗🚙🚐")
 
 # Title of the app centered
 st.title('US Vehicle Advertisement Listings')
